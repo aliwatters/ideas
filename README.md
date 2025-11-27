@@ -147,6 +147,23 @@ All templates are located in the `TEMPLATES/` directory:
 - **FEATURE_SPEC.md** - Template for individual feature descriptions
 - **GHERKIN_EXAMPLE.feature** - Reference for writing behavioral specifications
 
+## 🔧 Utilities
+
+### Domain Availability Checker (`check_domains.py`)
+
+A Python script for batch-checking domain availability using whois lookups. Useful when brainstorming project names and need to find available domains.
+
+```bash
+# Edit the DOMAINS list in the script, then run:
+python3 check_domains.py
+```
+
+Features:
+- Parallel whois lookups (3 concurrent to avoid rate limiting)
+- Detects available vs taken domains
+- Summarizes results with counts
+- Handles timeouts and errors gracefully
+
 ## 🎨 Tips for Success
 
 1. **Start small** - Begin with a simple README and one feature spec
